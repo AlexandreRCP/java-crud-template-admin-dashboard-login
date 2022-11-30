@@ -5,64 +5,63 @@ import javax.persistence.*;
 import org.hibernate.annotations.Type;
 
 @Entity
-@Table(name="adminsitradores")
+@Table(name = "administradores")
 public class Administrador {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id")
+  private int id;
 
-    @Column(name = "nome", length = 100, nullable = false) 
-    private String nome;
+  @Column(name = "nome", length = 100, nullable = false)
+  private String nome;
 
-    @Column(name = "email", length = 180, nullable = false)
-    private String email;
+  @Column(name = "email", length = 180, nullable = false)
+  private String email;
 
-    @Column(name = "senha", length = 255, nullable = false)
-    private String senha;
+  @Column(name = "senha", length = 255, nullable = false)
+  private String senha;
 
-    @Column(name = "observacao")
-    @Type(type = "text")
-    private String observacao;
+  @Column(name = "observacao")
+  @Type(type = "text")
+  private String observacao;
 
-    public int getId() {
-        return id;
-    }
+  public String getObservacao() {
+    return observacao;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public void setObservacao(String observacao) {
+    this.observacao = observacao;
+  }
 
-    public String getNome() {
-        return nome;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public String getEmail() {
-        return email;
-    }
+  public String getSenha() {
+    return this.senha;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
 
-    public String getSenha() {
-        return senha;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public String getObservacao() {
-        return observacao;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public void setObservacao(String observacao) {
-        this.observacao = observacao;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 }

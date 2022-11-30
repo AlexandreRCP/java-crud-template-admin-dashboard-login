@@ -1,3 +1,4 @@
+
 package com.adadmin.javaspring.appDashboard;
 
 import org.springframework.boot.SpringApplication;
